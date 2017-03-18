@@ -10,11 +10,13 @@ Django==1.10.5
 django-cors-headers==2.0.2
 django-filter==1.0.1
 django-prettyjson==0.2.2
-djangorestframework==3.5.4
+djangorestframework==3.6.2
+djangorestframework-jwt==1.9.0
 incremental==16.10.1
 Markdown==2.6.8
 packaging==16.8
 psycopg2==2.6.2
+PyJWT==1.4.2
 pyparsing==2.1.10
 six==1.10.0
 standardjson==0.3.1

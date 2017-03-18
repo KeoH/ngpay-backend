@@ -149,6 +149,18 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, '../../static')
 MEDIA_ROOT = os.path.join(BASE_DIR, '../../media')
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
+
+
 # CORS
 # CORS_ORIGIN_ALLOW_ALL = True
 
