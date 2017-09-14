@@ -2,7 +2,7 @@
 Backend para NgPay
 
 
-##Install
+## Install
 
 Para instalar:
 - Crear las dos bases de datos (ng_pay y ng_pay_payments)
