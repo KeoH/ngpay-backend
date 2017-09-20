@@ -162,5 +162,5 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:8080',
     'localhost:4200',
     '127.0.0.1:9000',
-    'https://vue-dash.firebaseapp.com'
+    'vue-dash.firebaseapp.com'
 )
