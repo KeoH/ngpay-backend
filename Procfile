@@ -1,1 +1,1 @@
-web: python manage.py runserver --settings=core.settings.prod
+web: python manage.py runserver --settings=core.settings.prod 0.0.0.0:8000
