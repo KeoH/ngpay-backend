@@ -4,12 +4,20 @@ import django.contrib.postgres.fields as postgres_fields
 from .behaviours import TimestampBehaviour
 
 
+OPERATION_TYPES = (
+    ('Authorization' , 'authorization'),
+    ('Authorization and Capture' , 'authorization-and-capture'),
+    ('Refund' , 'refund'),
+    ('Void' , 'void'),
+    ('Capture' , 'capture')
+)
+
 class Operation(TimestampBehaviour,models.Model):
     _db = 'payments'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    type = models.CharField(verbose_name='Tipo', max_length=255)
-    description = models.TextField(verbose_name='descripción', max_length=255, blank=True, null=True)
+    type = models.CharField(verbose_name='Tipo', max_length=50, choices=OPERATION_TYPES)
+    #description = models.TextField(verbose_name='descripción', max_length=255, blank=True, null=True)
 
     def last_response(self):
         return responses.objects.last()
