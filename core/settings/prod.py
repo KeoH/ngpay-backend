@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'x6$s)ogd%x*6#mr$+ntbn_5+v2bigxppbwug0-m-=f3r8vxysc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -161,5 +161,6 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     'localhost:8080',
     'localhost:4200',
-    '127.0.0.1:9000'
+    '127.0.0.1:9000',
+    'https://vue-dash.firebaseapp.com'
 )
