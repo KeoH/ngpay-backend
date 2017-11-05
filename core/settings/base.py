@@ -35,6 +35,11 @@ INSTALLED_APPS = [
     'transactions.apps.TransactionsConfig',
     'operations.apps.OperationsConfig',
     'responses.apps.ResponsesConfig',
+
+    'accounts.apps.AccountsConfig',
+    'credentials.apps.CredentialsConfig',
+    'merchants.apps.MerchantsConfig',
+    'fees.apps.FeesConfig',
 ]
 
 MIDDLEWARE = [

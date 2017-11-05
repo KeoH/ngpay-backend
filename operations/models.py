@@ -22,7 +22,7 @@ class Operation(TimestampBehaviour):
 
 
 class Authorization(Operation, AmountOperationBehaviour):
-    
+
     transaction = models.ForeignKey(Transaction, related_name='authorizations')
 
 
@@ -36,7 +36,7 @@ class AuthorizationAndCapture(Operation, AmountOperationBehaviour):
     transaction = models.ForeignKey(Transaction, related_name='authorizations_and_captures')
 
     class Meta:
-        verbose_name_plural = 'Authorizations and Captures'
+        verbose_name = 'Authorization and Capture'
         verbose_name_plural = 'Authorizations and Captures'
 
 
