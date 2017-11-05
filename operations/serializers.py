@@ -1,10 +1,10 @@
 
 from rest_framework import serializers
 
-from payments.models import Payment
+from operations.models import Payment
 
 class PaymentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Payment
-        fields = [ 'id', 'type', 'description', 'amount', 'creation_date' ]
+        fields = [ 'id', 'type', 'amount', 'creation_date' ]

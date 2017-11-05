@@ -4,5 +4,5 @@ from django.conf.urls import url, include
 
 
 urlpatterns = [
-    url(r'^payments', include('payments.urls'))
+    url(r'^operations', include('operations.urls'))
 ]

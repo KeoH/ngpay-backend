@@ -9,3 +9,4 @@ class TimestampBehaviour(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ['-creation_date']
