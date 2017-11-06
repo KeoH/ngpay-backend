@@ -32,6 +32,8 @@ INSTALLED_APPS = [
 
     'core',
 
+    'api.apps.ApiConfig',
+
     'transactions.apps.TransactionsConfig',
     'operations.apps.OperationsConfig',
     'responses.apps.ResponsesConfig',

@@ -3,23 +3,21 @@ from django.db import models
 
 from core.behaviours import TimestampBehaviour
 
+from merchants.models import Merchant
+
 class AbstractAccount(TimestampBehaviour):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    is_active = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.id)
 
-    class Meta:
-        abstract = True
 
+class Account(AbstractAccount):
 
-class RealAccount(AbstractAccount):
-    # merchant = models.ForeignKey(Merchant, related_name="accounts") <--- Cuando esté creado el modelo
-    
-    pass
+    merchant = models.ForeignKey(Merchant, related_name="accounts")
 
-class SandboxAccount(AbstractAccount):
-    # merchant = models.ForeignKey(Merchant, related_name="sandbox_accounts") <--- Cuando esté creado el modelo
-    
-    pass
+    def __str__(self):
+        return '{} / {}'.format(self.merchant.name, 'Verified' if self.is_verified else 'Unverified')
